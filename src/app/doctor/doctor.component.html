@@ -1,0 +1,95 @@
+<dialog #reserve class="reservedialog">
+  <h2>ნამდვილად გსურთ დაჯავშნა?</h2>
+  <h4>გთხოვთ მიუთითოთ რა გაწუხებთ.</h4>
+  <input type="text" #problem/>
+  <hr>
+  <button (click)="cancelReservation()" class="cancel">გაუქმება</button>
+  <button (click)="confirmReservation(problem.value)" class="confirm">დაჯავშნა</button>
+</dialog>
+
+<dialog #cancelation class="reservedialog">
+  <h2>ნამდვილად გსურთ ჯავშნის გაუქმება?</h2>
+  <button (click)="closeCancelationDialog()" class="cancel">არ მსურს</button>
+  <button (click)="confirmCancelation()" class="confirm">გაუქმება</button>
+</dialog>
+<app-navbar></app-navbar>
+<div class="section">
+    <div class="categories">
+        <h3>კატეგორიები</h3>
+        <div class="category">
+          <p class="Quantity">(15)</p>
+          <p class="Profession">ანდროლოგი </p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(8)</p>
+          <p class="Profession">ანესთეზიოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(5)</p>
+          <p class="Profession">კარდიოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(7)</p>
+          <p class="Profession">კოსმეტოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(23)</p>
+          <p class="Profession">ლაბორანტი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(35)</p>
+          <p class="Profession">ოჯახის ექიმი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(25)</p>
+          <p class="Profession">პედიატრი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(21)</p>
+          <p class="Profession">ტოქსიკოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(4)</p>
+          <p class="Profession">ტრანსფუზილოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(7)</p>
+          <p class="Profession">გინეკოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(9)</p>
+          <p class="Profession">დერმატოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(10)</p>
+          <p class="Profession">ენდოკრინოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(17)</p>
+          <p class="Profession">გასტროენტეროლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(10)</p>
+          <p class="Profession">თერაპევტი</p>
+        </div>
+    </div>
+    <div class="profile">
+         <div class="profileTop">
+              <img src="{{data.photo}}" class="img"/>
+              <div class="profileTopText">
+                   <h3>{{data.firstname}} <b>{{data.lastname}}</b></h3>
+                   <p>{{data.categories}}</p>
+              </div>
+              <div class="line"></div>
+              <div class="profileTopText2">
+                    <p><b>2017 - დღემდე,</b> ჩვენი კლინიკის გენერალური დირექტორი</p>
+                    <p><b>2002 - დღემდე,</b> ჩვენი კომპიუტერული ტომოგრაფიის განყოფილების ხელმძღვანელი</p>
+                    <p><b>1995 - დღემდე,</b> კარდიოლოგი / არითმოლოგი</p>
+              </div>
+         </div>
+         <div class="calendar">
+          <full-calendar  [options]="calendarOptions" class="calendarcomp"></full-calendar>
+         </div>
+    </div>
+</div>
+<app-contact class="contact"></app-contact>

@@ -1,0 +1,127 @@
+<dialog #cancelation class="reservedialog">
+    <h2>ნამდვილად გსურთ ჯავშნის გაუქმება?</h2>
+    <button (click)="closeCancelationDialog()" class="cancel">არ მსურს</button>
+    <button (click)="confirmCancelation()" class="confirm">გაუქმება</button>
+</dialog>
+
+<dialog #edit class="reservedialog">
+    <h2>ნამდვილად გსურთ ჯავშნის შეცვლა?</h2>
+    <p style="font-family: FiraGo;">ჯავშნის ჩეცვლისთვის წაშალეთ არსებული ჯავშანი და დაამატეთ ახალი სასურველ დროს</p>
+    <button (click)="confirmEdition()" class="confirm">დახურვა</button>
+</dialog>
+
+<dialog #add class="reservedialogadd">
+    <h2>ნამდვილად გსურთ ჯავშნის დამატება</h2>
+    <input type="text" placeholder="შეიყვანეთ პრობლემა" #problem/>
+    <p *ngIf="user.role != 'Client'">არჩეული კლიენტი: {{chosenClient}}</p>
+    <p *ngIf="user.role == 'Client'">არჩეული ექიმი: {{chosenDoctor}}</p>
+
+    <div *ngIf="chosenDoctor.length < 1">
+        <div class="PeopleToChoose" *ngIf="user.role == 'Client'">
+            <div class="people" *ngFor="let doctor of doctors">
+                <img src="{{doctor.photo}}"/>
+                <p (click)="chooseDoctor(doctor)">{{doctor.firstaname}} {{doctor.lastname}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="chosenClient.length < 1">
+        <div class="PeopleToChoose" *ngIf="user.role != 'Client'">
+            <div class="people" *ngFor="let client of clients">
+                <img src="{{client.photo}}" (click)="chooseClient(user)"/>
+                <p (click)="chooseClient(client)">{{client.firstaname}} {{client.lastname}}</p>
+            </div>
+        </div>
+    </div>
+    <p>დააჭირეთ დაჯავშნას სურვილის შემთხვევაში</p>
+    <button (click)="closeAdd()" class="cancel">არ მსურს</button>
+    <button (click)="confirmAdd(problem.value)" class="confirm">დაჯავშნა</button>
+</dialog>
+
+<dialog #addGuide class="reservedialog">
+    <h2>ნამდვილად გსურთ ჯავშნის დამატება</h2>
+    <p style="font-family: FiraGo;">ჯავშნის დამატებბისთვის დააჭირეთ სასურველ დროს კალენდარზე</p>
+    <button (click)="closeAddGuide()" class="cancel">ჩაკეცვა</button>
+</dialog>
+
+
+<app-navbar></app-navbar>
+<section>
+    <div class="topDiv">
+        <div class="leftSide">
+             <div class="leftSideInside">
+                <i class="fa-solid fa-bars"></i>
+                <h3>რეგისტრაცია</h3>
+                <h3>კატეგორიები</h3>
+                <h3>ექიმები</h3>
+             </div>
+        </div>
+        <div class="rightside">
+             <div class="catDiv">
+                <h3>ექიმი</h3>
+             </div>
+             <div class="catDiv">
+                <h3>მომხმარებელი</h3>
+             </div>
+             <div class="catDiv">
+                <h3>ადმინისტრატორი</h3>
+             </div>
+        </div>
+   </div>
+   <div class="midDiv">
+        <div class="midLeftDiv">
+             <div class="clientCard">
+                <div class="profile">
+                    <img src="{{user.photo}}" class="profilePhoto"/>
+                    <h3>{{user.firstname}} {{user.lastname}}</h3>
+                    <h4 *ngIf="user.role == 'Client'">{{user.categories}}</h4>
+                    <h4 *ngIf="user.role != 'Client'">ექიმი</h4>
+                    <h5 *ngIf="user.role != 'Client'">{{user.categories}}</h5>
+                </div>
+                <div class="details">
+                     <div class="detailsLeft">
+                          <div class="detail">
+                            <i class="fa-solid fa-pencil" style="color: #B4C2CC; font-size: 20px;"></i>
+                            <div class="data">
+                                <h3 style="margin-top: 10px;">პირადი ნომერი:</h3>
+                                <h3 id="dataDetail">{{user.idnumber}}</h3>
+                            </div>
+                          </div>
+                          <div class="detail">
+                            <i class="fa-solid fa-pencil" style="color: #B4C2CC; font-size: 20px;"></i>
+                            <div class="data">
+                                <h3 style="margin-top: 10px;">Email:</h3>
+                                <h3 id="dataDetail">{{user.email}}</h3>
+                            </div>
+                          </div>
+                          <div class="detail">
+                            <i class="fa-solid fa-pencil" style="color: #B4C2CC; font-size: 20px;"></i>
+                            <div class="data">
+                                <h3 style="margin-top: 10px;">პაროლის შეცვლა</h3>
+                            </div>
+                          </div>
+                     </div>
+                     <div class="detailsRight">
+                        <div class="detail">
+                            <div class="data">
+                                <h3 style="margin-top: 10px;margin-left: -10px;">დაჯავშნილია:</h3>
+                                <h3 id="dataDetail">({{savedDates.length}})</h3>
+                            </div>
+                          </div>
+                     </div>
+                </div>
+             </div>
+             <div class="Edits">
+                  <div id="Add" (click)="showGuide()"><h4>+ დამატება</h4></div>
+                  <div id="Edit" (click)="showEditDialog()"><h4><i class="fa-solid fa-pencil" style="color: #18A4E1; font-size: 16px;"></i> რედაქტირება</h4></div>
+                  <div id="Delete" (click)="showCancelationDialog()"><h4><i class="fa-solid fa-trash"  style="color: white; font-size: 16px;"></i> წაშლა</h4></div>
+             </div>
+        </div>
+        <div class="midRightDiv">
+            <div class="calendar">
+                <full-calendar  [options]="calendarOptions" class="calendarcomp"></full-calendar>
+            </div>
+        </div>
+   </div>
+</section>
+<app-contact id="contact"></app-contact>

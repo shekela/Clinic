@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<h2>რეგისტრაცია</h2>
+<div class="main">
+  <form (ngSubmit)="signUp()" #myForm>
+        <div class="top">
+            <div class="box">
+              <p>სახელი</p>
+              <input type="text" placeholder="(მინიმუმ 5 სიმბოლო)" class="input" name="Firstname" required/>
+            </div>
+            <div class="box">
+              <p>Email</p>
+              <div class="emailinput">
+                  <input type="email" placeholder="(მინიმუმ 5 სიმბოლო)" #Email required name="Email"/>
+              </div>
+              <pre *ngIf="OTPTimeout">*ბმულის მოქედების ვადა ამოიწურა</pre>
+              <pre *ngIf="OTPFalse">*კოდი არასწორია, სცადეთ თავიდან</pre>
+            </div>
+            <div class="box">
+              <p>პირადი ნომერი</p>
+              <input type="text" placeholder="00000000000" class="input" name="Idnumber" required/>
+            </div>
+      </div>
+      <div class="bottom">
+            <div class="box">
+              <p>გვარი</p>
+              <input type="text" placeholder="(მინიმუმ 5 სიმბოლო)" class="input"  name="Lastname" required/>
+            </div>
+            <div class="box">
+              <p>პაროლი</p>
+              <input type="password" placeholder="( მინიმუმ 8 სიმბოლო : @ 7 , )" class="input"  name="Password" required/>
+            </div>
+            <div class="box">
+                <p>კატეგორია</p>
+                <input type="text" placeholder="( მინიმუმ 8 სიმბოლო : @ 7 , )" class="input" name="Categories" required/>
+            </div>
+      </div>
+      <div class="bottom2">
+        <div class="box">
+          <p>ფოტოსურათი</p>
+          <input type="file"  class="input" #Photo   accept=".jpg,.png,.gif,.pdf,.xls,.xlsx,.doc,.docx,.ppt,.pptx" name="Photo" required/>
+        </div>
+        <div class="box">
+          <p>CV</p>
+          <input type="file"  class="input" #Cvfile  accept=".jpg,.png,.gif,.pdf,.xls,.xlsx,.doc,.docx,.ppt,.pptx" name="Cvfile" required/>
+        </div>
+      </div>
+      <button class="submit" type="submit">რეგისტრაცია</button>
+  </form>
+</div>
+<app-contact id="contact"></app-contact>

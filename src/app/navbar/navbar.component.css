@@ -1,0 +1,313 @@
+.line{
+    width: 38%;
+    height: 1px;
+    background-color: #ECF2F8;
+    position: absolute;
+    margin-left: 28%;
+    top: 70px;
+}
+.top{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+.img{
+    margin-left: 12% ;
+}
+.services{
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+    font-family: "FiraGo";
+    font-size: 0.9em;
+}
+.services h3{
+    margin-left: 20px;
+}
+
+.reglog{
+    display: block;
+    align-items: center;
+}
+.reglog2{
+    display: flex;
+    align-items: center;
+}
+.bottom{
+    width: 100%;
+    height: 100px;
+    background-color: #ECF2F8;
+    display: flex;
+    align-items: center;
+}
+.reglog{
+    margin-left: 3%;
+    width: 320px;
+    height: 47px;
+    background: #F0FAFF;
+    border-radius: 25px;
+}
+.reglog button{
+    font-size: 0.9em;
+    font-family: "FiraGo";
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+#log{
+    margin-left: 50px;
+    color: #18A4E1;
+}
+.lang{
+    width: 80px;
+    height: 45px;
+    background: #F0FAFF;
+    border-radius: 25px;
+    font-family: "FiraGo";
+    font-size: 0.9em;
+    margin-left: 1.5%;
+}
+.lang h3{
+    text-align: center;
+    margin-top: 12px;
+}
+.Phone{
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 1.1em;
+    color: #053354;
+    margin-left: 11.5%;
+}
+.Phone img{
+    width: 67.5px;
+    height: 55px;
+}
+.Location{
+    display: flex;
+    align-items: center;
+    font-family: "FiraGo";
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #053354;
+    margin-left: 2%;
+}
+.Location img{
+    width: 65px;
+    height: 50px;
+}
+.DoctorSearchByName{
+    width: 450px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid rgba(24, 164, 225, 0.5);
+    border-radius: 50px;
+    margin-left: 40px;
+    font-size: 1em;
+    font-weight: normal;
+}
+.DoctorSearchBySpec{
+    width: 450px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid rgba(24, 164, 225, 0.5);
+    border-radius: 50px;
+    margin-left: 15px;
+    font-size: 1em;
+    font-weight: normal;
+}
+.search{
+    width: 41px;
+    height: 41px;
+    background: #053354;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: lighter;
+    margin-left: 0.75%;
+    cursor: pointer;
+}
+input::placeholder{
+    font-family: "FiraGo";
+    font-size: 1em;
+    font-weight: normal;
+    color: rgba(5, 51, 84, 0.3);
+    text-align: left;
+    padding: 25px;
+}
+dialog{
+    width: 100%;
+    height: 100vh;
+    border: none;
+    background: transparent;
+}
+.loginModal{
+    position: absolute;
+    width: 550px;
+    height: 400px;
+    left: 37%;
+    top: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.loginModal h2{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    margin-left: 77px;
+    color: #18A4E1;
+    margin-top: 60px;
+}
+.loginModal input{
+    width: 400px;
+    height: 45px;
+    border: 1px solid #ECF2F8;
+    border-radius: 50px;
+    border: 1px solid #ECF2F8;
+    outline: none;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.loginModal input::placeholder{
+    font-family: "FiraGo";
+    font-size: 1em;
+}
+.modaldiv{
+    margin-left: 75px;
+    margin-top: 30px;
+}
+.loginModal p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #053354;
+    margin-left: 270px;
+}
+.loginModal button{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #053354;
+    border-radius: 50px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 590;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.resetpass{
+    position: absolute;
+    width: 550px;
+    height: 400px;
+    left: 37%;
+    top: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.resetpass h2{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    margin-left: 77px;
+    color: #18A4E1;
+    margin-top: 40px;
+}
+.resetpass input{
+    width: 400px;
+    height: 45px;
+    border: 1px solid #ECF2F8;
+    border-radius: 50px;
+    outline: none;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.resetpass input::placeholder{
+    font-family: "FiraGo";
+    font-size: 1em;
+}
+.resetpass .modaldiv{
+    margin-left: 75px;
+    margin-top: 0px;
+}
+.resetpass p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #053354;
+    margin-left: 295px;
+}
+.resetpass button{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    background: #053354;
+    border-radius: 50px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 590;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+.emailinput{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 45px;
+    border-radius: 50px;
+    border: 1px solid #ECF2F8;
+}
+.emailinput input{
+    width: 380px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    margin-top: 0px;
+}
+.emailinput input::placeholder{
+    font-family: "FiraGo";
+    font-size: 1em;
+}
+.emailinput button{
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    margin-left: 360px;
+}
+.logout{
+    width: 98.99%;
+    height: 40px;
+    border: 1px solid #F0FAFF;
+    background: #F0FAFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+    border-radius: 0px;
+}
+.logout button{
+    margin-top: 15px;
+    margin-left: 40%;
+    cursor: pointer;
+}

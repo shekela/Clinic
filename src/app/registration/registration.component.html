@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<h2>რეგისტრაცია</h2>
+<div class="main">
+  <form [formGroup]="RegisterForm" (ngSubmit)="onSignup()" ngNativeValidate>
+        <div class="top">
+            <div class="box">
+              <p>სახელი</p>
+              <div class="emailinput">
+                <input type="text" placeholder="(მინიმუმ 5 სიმბოლო)" class="input" formControlName="Firstname" required minlength="5" maxlength="35"/>
+              </div>
+            </div>
+
+            <div class="box">
+              <p>Email</p>
+              <div class="emailinput">
+                  <input type="email" placeholder="(მინიმუმ 5 სიმბოლო)" #Email  formControlName="Email" required minlength="5" maxlength="35"/>
+                  <button (click)="SendMail(Email.value)" style="cursor: pointer;" type="button"><i class="fa-solid fa-envelope-circle-check"></i></button>
+              </div>
+              <pre *ngIf="OTPTimeout">*ბმულის მოქედების ვადა ამოიწურა</pre>
+              <pre *ngIf="OTPFalse">*კოდი არასწორია, სცადეთ თავიდან</pre>
+            </div>
+
+            <div class="box">
+              <p>პირადი ნომერი</p>
+              <div class="emailinput">
+                <input type="text" placeholder="00000000000" class="input" formControlName="Idnumber" required minlength="11" maxlength="11"/>
+              </div>
+            </div>
+      </div>
+      <div class="bottom">
+          <div class="box">
+            <p>გვარი</p>
+            <div class="emailinput">
+              <input type="text" placeholder="(მინიმუმ 5 სიმბოლო)" class="input" formControlName="Lastname" required minlength="5" maxlength="35"/>
+            </div>
+          </div>
+          <div class="box">
+            <p>აქტივაციის კოდი</p>
+            <div class="emailinput">
+              <input type="text" placeholder="000000" formControlName="Otp" class="input" required minlength="6" maxlength="6"/>
+            </div>
+          </div>
+          <div class="box">
+            <p>პაროლი</p>
+            <div class="emailinput">
+              <input type="password" placeholder="( მინიმუმ 8 სიმბოლო : @ 7 , )" class="input"  formControlName="Password" required minlength="7" maxlength="35"/>
+            </div>
+          </div>
+      </div>
+      <button class="submit" type="submit">რეგისტრაცია</button>
+  </form>
+</div>
+<app-contact id="contact"></app-contact>

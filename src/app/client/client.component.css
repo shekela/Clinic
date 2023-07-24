@@ -1,0 +1,234 @@
+.section{
+    display: flex;
+    align-items: flex-start;
+}
+.profile{
+    width: 300px;
+    height: 800px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 50px rgba(5, 51, 84, 0.05);
+    background-color: #FFFFFF;
+    margin-top: 75px;
+    margin-left: 75px;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.categories{
+    width: 300px;
+    height: 800px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 50px rgba(5, 51, 84, 0.05);
+    background-color: #FFFFFF;
+    margin-top: 75px;
+    margin-left: 12%;
+    display: block;
+    overflow: hidden;
+}
+.categories h3{
+    text-align: center;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: 200px;
+    padding: 10px;
+    margin-left: 40px;
+    border-bottom: 1px solid #ECF2F8;
+    color: #053354;
+}
+.category{
+    width: 240px;
+    margin-left: 40px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+.Profession{
+    margin-left: 20px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #053354;
+}
+.Quantity{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(5, 51, 84, 0.3);
+}
+.img{
+    width: 157px;
+    height: 157px;
+    border-radius: 50%;
+    margin-top: 41.5px;
+}
+#name{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #18A4E1;
+} 
+.profile h3{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #053354;
+    margin-top: 50px;
+}
+.profile p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 19px;
+    margin-top: -12px;
+    color: rgba(5, 51, 84, 0.3);
+}
+.calendar{
+    margin-top: 50px;
+    margin-left: 85px;
+    width: 37%;
+}
+.calendar p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    color: rgba(5, 51, 84, 0.3);
+    
+}
+.calendar b{
+    color: #18A4E1;
+}
+.calendarcomp{
+    height: 337px;
+}
+.contact{
+    display: block;
+    margin-top: 100px;
+}
+.reservedialog{
+    border: 1px solid lightgrey;
+    background-color: #E6F4F3;
+    width: 450px; 
+    height: 350px; 
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.reservedialog h2{
+    font-family: "FiraGo";
+    font-size: 23px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog h4{
+    font-family: "FiraGo";
+    font-size: 17.5px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog input{
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.reservedialog button{
+    margin-top: 60px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "FiraGo";
+}
+hr{
+    margin-top: 50px;
+}
+.confirm{
+    background-color: #7DE78A;
+    margin-left: 20px;
+}
+.cancel{
+    background-color: #EA3A3A;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

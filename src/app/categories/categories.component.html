@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<h2 class="title">კატეგორიები</h2>
+<div class="categories">
+     <div class="top">
+        <div class="topTitle">
+            <h3>სახელი</h3>
+        </div>
+        <div class="topTitle">
+            <h3>კატეგორია</h3>
+        </div>
+        <div class="topTitle">
+            <h3>ფოტოსურათი</h3>
+        </div>
+        <div class="topTitle">
+            <h3></h3>
+        </div>
+     </div>
+     <div class="cetrgoryData">
+         <div class="data" *ngFor="let user of data">
+            <div class="topTitle">
+                <h3 routerLink="./Userprofile/{{user.role}}/{{user.id}}">{{user.firstname}} {{user.lastname}}</h3>
+            </div>
+            <div class="topTitle">
+                <h3>{{user.categories}}</h3>
+            </div>
+            <div class="topTitle">
+                <img routerLink="./Userprofile/{{user.role}}/{{user.id}}" src={{user.photo}} style="width: 40px; width: 40px;border-radius: 50%;"/>
+            </div>
+            <div class="topTitle">
+                <button style="background-color: #DAFAEE;" (click)="dialog.showModal()" (click)="getId(user.id)" (click)="setPhotoValue(user.photo)"><i class="fa-solid fa-pencil" style="color: #3ACF99; font-size: 20px;"></i></button>
+                <button style="background-color: #FF93A6;" (click)="deleteUser.showModal(); deleteUserAction(user.role, user.id)"><i class="fa-solid fa-trash"  style="color: white; font-size: 20px;"></i></button>
+            </div>
+            <dialog #dialog>
+                <form #myForm>
+                    <a (click)="dialog.close()"><i class="fa-solid fa-xmark"></i></a>
+                    <input placeholder="სახელი" type="text" style="margin-top: 40px;" name="Firstname" value="{{user.firstname}}" required/>
+                    <input placeholder="გვარი" type="text"  name="Lastname" value="{{user.lastname}}" required />
+                    <input placeholder="კატეგორია" type="text"  name="Categories" value="{{user.categories}}" required />
+                    <input placeholder="ფოტოსურათი" type="file" name="Photo" required/>
+                    <button type="submit" class="submit" (click)="editUser(user.role)">რედაქტირება</button>
+                </form>
+            </dialog>
+         </div>
+     </div> 
+</div>
+
+<dialog #deleteUser class="reservedialog">
+    <h2>ნამდვილად გსურთ მომხმარებლის წაშლა?</h2>
+    <button (click)="deleteUser.close()" class="cancel">არ მსურს</button>
+    <button (click)="confirmDeleting()"  class="confirm">წაშლა</button>
+</dialog>

@@ -1,0 +1,179 @@
+.section{
+    display: flex;
+    align-items: flex-start;
+}
+.profile{
+    margin-top: 75px;
+    margin-left: 75px;
+}
+.custom-backdrop {
+    pointer-events: none;
+  }
+.profileTop{
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #ECF2F8;
+    box-shadow: 0px 4px 30px rgba(5, 51, 84, 0.05);
+    border-radius: 10px;
+    width: 90%;
+    height: 220px;
+}
+.categories{
+    width: 300px;
+    height: 800px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 50px rgba(5, 51, 84, 0.05);
+    background-color: #FFFFFF;
+    margin-top: 75px;
+    margin-left: 12%;
+    display: block;
+    overflow: hidden;
+}
+.categories h3{
+    text-align: center;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: 200px;
+    padding: 10px;
+    margin-left: 40px;
+    border-bottom: 1px solid #ECF2F8;
+    color: #053354;
+}
+.category{
+    width: 240px;
+    margin-left: 40px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+.Profession{
+    margin-left: 20px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #053354;
+}
+.Quantity{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(5, 51, 84, 0.3);
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.profileTopText{
+    margin-left: 20px;
+}
+.profileTopText h3{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #053354;
+}
+.profileTopText p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(5, 51, 84, 0.3);
+}
+.line{
+    width: 1px;
+    height: 130px;
+    background-color: #ECF2F8;
+    margin-left: 30px;
+}
+.profileTopText2{
+    margin-left: 50px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: navy;
+}
+.calendarcomp{
+    height: 340px;
+}
+.profileTopText2 p{
+    width: 80%;
+}
+b{
+    color: #053354;
+}
+.calendar{
+    max-width: 90%;
+    margin-top: 55px;
+}
+
+.contact{
+    display: block;
+    margin-top: 180px;
+}
+.reservedialog{
+    border: 1px solid lightgrey;
+    background-color: #E6F4F3;
+    width: 450px; 
+    height: 350px; 
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.reservedialog h2{
+    font-family: "FiraGo";
+    font-size: 23px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog h4{
+    font-family: "FiraGo";
+    font-size: 17.5px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog input{
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.reservedialog button{
+    margin-top: 60px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "FiraGo";
+}
+hr{
+    margin-top: 50px;
+}
+.confirm{
+    background-color: #7DE78A;
+    margin-left: 20px;
+}
+.cancel{
+    background-color: #EA3A3A;
+}

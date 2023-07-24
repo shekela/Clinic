@@ -1,0 +1,175 @@
+.title{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+
+    color: #18A4E1;
+    margin-left: 12.5%;
+    margin-top: 50px;
+}
+.categories{
+    width: 75%;
+    margin-left: 12.5%;
+    border-radius: 10px 10px 0px 0px;
+}
+.cetrgoryData{
+    height: 500px;
+    overflow-y: scroll;
+    border: 1px solid rgb(240,250,255);
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #F1F3F6; 
+    border-radius: 1px;
+    margin-top: 3px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2B4CA0;
+    border-radius: 1px
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 42px;
+    background-color: #F0FAFF;
+    border-radius: 10px 10px 0px 0px;
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 99.85%;
+    height: 55px;
+    border-bottom: 1px solid rgb(240,250,255);
+    border-left: 1px solid rgb(240,250,255);
+    border-right: 1px solid rgb(240,250,255);
+}
+.data img{
+    margin-left: 65px;
+}
+.topTitle{
+    width: 25%;
+    overflow: hidden;
+}
+.topTitle h3{
+    margin-left: 30px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #053354;
+}
+.topTitle button{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+input{
+    width: 400px;
+    height: 45px;
+    border: 1px solid #ECF2F8;
+    border-radius: 50px;
+    border: 1px solid #ECF2F8;
+    outline: none;
+    margin-top: 10px;
+    font-size: 1em;
+    margin-left: 20px;
+}
+dialog{
+    position: absolute;
+    width: 450px;
+    height: 350px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ECF2F8;
+}
+.submit{
+    width: 180px;
+    height: 40px;
+    background: #053354;
+    border-radius: 50px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 590;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.fa-xmark{
+    float: right;
+    cursor: pointer;
+}
+.reservedialog{
+    border: 1px solid lightgrey;
+    background-color: #E6F4F3;
+    width: 450px; 
+    height: 350px; 
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.reservedialog h2{
+    font-family: "FiraGo";
+    font-size: 23px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog h4{
+    font-family: "FiraGo";
+    font-size: 17.5px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog input{
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.reservedialog button{
+    margin-top: 60px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "FiraGo";
+}
+.confirm{
+    background-color: #7DE78A;
+    margin-left: 20px;
+}
+.cancel{
+    background-color: #EA3A3A;
+}

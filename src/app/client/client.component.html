@@ -1,0 +1,101 @@
+<dialog #cancelation class="reservedialog">
+  <h2>ნამდვილად გსურთ ჯავშნის გაუქმება?</h2>
+  <button (click)="closeCancelationDialog()" class="cancel">არ მსურს</button>
+  <button (click)="confirmCancelation()" class="confirm">გაუქმება</button>
+</dialog>
+<app-navbar></app-navbar>
+<div class="section">
+    <div class="categories">
+        <h3>კატეგორიები</h3>
+        <div class="category">
+          <p class="Quantity">(15)</p>
+          <p class="Profession">ანდროლოგი </p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(8)</p>
+          <p class="Profession">ანესთეზიოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(5)</p>
+          <p class="Profession">კარდიოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(7)</p>
+          <p class="Profession">კოსმეტოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(23)</p>
+          <p class="Profession">ლაბორანტი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(35)</p>
+          <p class="Profession">ოჯახის ექიმი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(25)</p>
+          <p class="Profession">პედიატრი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(21)</p>
+          <p class="Profession">ტოქსიკოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(4)</p>
+          <p class="Profession">ტრანსფუზილოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(7)</p>
+          <p class="Profession">გინეკოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(9)</p>
+          <p class="Profession">დერმატოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(10)</p>
+          <p class="Profession">ენდოკრინოლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(17)</p>
+          <p class="Profession">გასტროენტეროლოგი</p>
+        </div>
+        <div class="category">
+          <p class="Quantity">(10)</p>
+          <p class="Profession">თერაპევტი</p>
+        </div>
+    </div>
+    <div class="profile">
+          <img src={{data.photo}} class="img"/>
+          <pre style="font-family: 'FiraGo';cursor: pointer;" (click)="activeateChange()">Change Photo</pre>
+          <form (ngSubmit)="onSubmit()" #myForm>
+            <input #file type="file" name="Photo" style="font-family: 'FiraGo';margin-left: 65px;margin-top: 0px;max-width: 180px;" placeholder="Upload Photo" (change)="onFileSelected($event)" *ngIf="change" #fileUpload accept=".jpg,.png"/>
+            <button style="font-family: 'FiraGo';cursor: pointer; background-color: white; font-size: 15px;margin-top: 10px; border: 1px solid grey;border-radius: 5px;" *ngIf="submit" type="submit">Submit</button>
+          </form>
+          <h3 id="name">{{data.firstname}} {{data.lastname}}</h3>
+          <div *ngIf="data.role == 'Doctor'">
+            <h5 style="font-family: 'FiraGo';color: #053354;">ექიმი</h5>
+            <p style="font-size: 14px;font-family: 'FiraGo';">{{data.categories}}</p>
+          </div>
+          <h3>პირადი ნომერი :</h3>
+          <p *ngIf="data.role != 'Admin'">{{data.idnumber}}</p>
+          <h3>Email :</h3>
+          <p>{{data.email}}</p>
+          <h3 style="cursor: pointer;">პაროლის შეცვლა</h3>
+          <h3 *ngIf="data.role != 'Admin'">ჩემი ჯავშანი :</h3>
+          <p *ngIf="data.role != 'Admin'">( 1 )</p>
+          <h3>2FA ვერიფიკაცია</h3>
+          <label class="switch">
+            <input type="checkbox" [(ngModel)]="isChecked" (ngModelChange)="onCheckboxChange($event)" >
+            <span class="slider round"></span>
+          </label>
+    </div>
+    <div class="calendar" *ngIf="data.role != 'Admin'">
+         <p><b>ჩემი ჯავშანი</b>( 2 )</p>
+         <full-calendar #calendarEl [options]="calendarOptions" class="calendarcomp"></full-calendar>
+    </div>
+    <div class="calendar" *ngIf="data.role == 'Admin'">
+         <h2 style="font-family: 'FiraGo';color: #053354;cursor: pointer;" routerLink="/Categories">მომხმარებლები</h2>
+         <h2 style="font-family: 'FiraGo';color: #053354;cursor: pointer;" routerLink="/Doctor/Registration">ექიმის რეგისტრაცია</h2>
+    </div>
+</div>
+<app-contact class="contact"></app-contact>

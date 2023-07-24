@@ -1,0 +1,225 @@
+.img{
+    position: relative;
+}
+img{
+    width: 100%;
+    height: 500px;
+}
+.cover{
+    width: 55%;
+    height: 460px;
+    background: rgba(5, 51, 84, 0.25); 
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    backdrop-filter: blur(2px);
+    border-radius: 0px 50px 50px 0px;
+}
+h1{
+    font-family: "FiraGo";
+    color: white;
+    width: 70%;
+    position: absolute;
+    top: 70px;
+    font-size: 1.8em;
+    width: 400px;
+    left: 12%;
+}
+.location{
+    width: 320px;
+    height: 45px;
+    position: absolute;
+    left: 12%;
+    top: 180px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+svg{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+.location p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #053354;
+    margin-left: 20px;
+}
+.secondSection{
+    width: 100%;
+    height: fit-content;
+    margin-top: -4px;
+    background-color: #FEFEFE;
+    display: flex;
+    align-items: flex-start;
+}
+.contact{
+    display: block;
+    margin-top: 500px;
+}
+.categories{
+    width: 300px;
+    height: 800px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 50px rgba(5, 51, 84, 0.05);
+    background-color: #FFFFFF;
+    margin-top: 75px;
+    margin-left: 12%;
+    display: block;
+    overflow: hidden;
+}
+.categories h3{
+    text-align: center;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    width: 200px;
+    padding: 10px;
+    margin-left: 40px;
+    border-bottom: 1px solid #ECF2F8;
+    color: #053354;
+}
+.category{
+    width: 240px;
+    margin-left: 40px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+}
+.Profession{
+    margin-left: 20px;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #053354;
+}
+.Quantity{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba(5, 51, 84, 0.3);
+}
+.container {
+    width: 59%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    height: fit-content;
+    margin-top: 65px;
+    margin-left: 50px;
+  }
+  .item {
+    width: 360px;
+    height: 360px;
+    background: #FFFFFF;
+    border: 1px solid black;
+    margin-top: 14px;
+    border: 1px solid rgba(24, 164, 225, 0.3);
+    box-shadow: 0px 4px 30px rgba(5, 51, 84, 0.05);
+    border-radius: 10px;
+  }
+  .views{
+    width: 100px;
+    height: 30px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.07em;
+    color: rgba(5, 51, 84, 0.5);
+    background: rgba(236, 242, 248, 0.5);
+    border-radius: 50px;
+    margin-left: 10px;
+  }
+  .topside{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .topside img{
+    width: 35px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .views img{
+    width: 25px;
+    height: 20px;
+    margin-left: 7.5px;
+  }
+  .views p{
+    margin-right: 7.5px;
+  }
+  .doctorimage{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-left: 110px;
+    margin-top: 0px;
+  }
+  .name{
+    text-align: center;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #053354;
+  }
+  .doccategory{
+    text-align: center;
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(5, 51, 84, 0.3);
+    margin-top: 0px;
+  }
+  .reservingbtn{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #18A4E1;
+    border-radius: 25px;
+    margin-left: 80px;
+    text-align: center;
+  }
+  .reservingbtn p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #18A4E1;
+    margin-top: 15px;
+  }
+  #contact{
+    display: block;
+    margin-top: 100px;
+  }
+  .categoryComp{
+    margin-left: 12%;
+    display: block;
+  }

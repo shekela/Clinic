@@ -1,0 +1,281 @@
+section{
+    width: 100%;
+    height: 70vh;
+    background-color: #FDFDFE;
+}
+.topDiv{
+    display: flex;
+    align-items: center;
+}
+.leftSide{
+    margin-top: 40px;
+    margin-left: 12%;
+    width: 450px;
+    height: 45px;
+    border-radius: 25px;
+    border: 1px solid #ECF2F8;
+    background-color: #FFFFFF;
+}
+.leftSideInside{
+    font-family: "FiraGo";
+    color: #053354;
+    margin-left: 25px;
+    width: 400px;
+    margin-top: -7px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.rightside{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+}
+.catDiv{
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #ECF2F8;
+    margin-left: 20px;
+}
+.catDiv h3{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 8px;
+    font-family: "FiraGo";
+    color: #18A4E1;
+}
+.midDiv{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.midLeftDiv{
+    margin-left: 12%;
+    margin-top: 0px;
+}
+.clientCard{
+    width: 650px;
+    height: 320px;
+    border-radius: 10px;
+    border: 1px solid #ECF2F8;
+    display: flex;
+    font-family: "FiraGo";
+}
+.profile{
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+.profile h3{
+   color: #18A4E1;
+   font-size: 16px;
+}
+.profile h4{
+    color: #053354;
+    font-size: 14px;
+ }
+ .profile h5{
+    color: #B4C2CC;
+    font-weight: lighter;
+ }
+.profilePhoto{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.detailsLeft{
+    margin-left: 40px;
+}
+.details{
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+.detail{
+    display: flex;
+    align-items: flex-start;
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.data{
+    margin-left: 10px;
+}
+.data h3{
+    margin-top: -5.5px;
+    color: #053354;
+}
+.data i{
+    margin-top: 45px;
+}
+#dataDetail{
+    color: #B4C2CC;
+    font-weight: lighter;
+}
+.midRightDiv{
+    margin-left: 100px;
+}
+.calendarcomp{
+    height: 340px;
+    margin-top: 0px;
+}
+.calendar{
+    width: 800px;
+    margin-top: 0px;
+}
+#contact{
+    display: block;
+    margin-top: 100px;
+}
+.Edits{
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.Edits div{
+    width: 170px;
+    height: 45px;
+    border-radius: 25px;
+    background-color: #B4C2CC;
+    text-align: center;
+    cursor: pointer;
+}
+.Edits div h4{
+    margin-top: 12px;
+    font-family: "FiraGo";
+    font-size: 16px;
+}
+#Add{
+    background-color: #3ACF99;
+    color: white;
+}
+#Edit{
+    background-color: #ECF2F8;
+    color: #18A4E1;
+}
+#Delete{
+    background-color: #FF93A6;
+    color: white;
+}
+.reservedialog{
+    border: 1px solid lightgrey;
+    background-color: #E6F4F3;
+    width: 450px; 
+    height: 350px; 
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.reservedialog h2{
+    font-family: "FiraGo";
+    font-size: 23px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog h4{
+    font-family: "FiraGo";
+    font-size: 17.5px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialog input{
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.reservedialog button{
+    margin-top: 60px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "FiraGo";
+}
+hr{
+    margin-top: 50px;
+}
+.confirm{
+    background-color: #7DE78A;
+    margin-left: 20px;
+}
+.cancel{
+    background-color: #EA3A3A;
+    margin-top: 300px;
+}
+.PeopleToChoose{
+    width: 80%;
+    height: 150px;
+    margin-top: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: white;
+    overflow-y: scroll;
+    display: block;
+}
+.people{
+    display: flex;
+    text-align: center;
+    font-family: "FiraGo";
+    width: 100%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid lightgrey;
+}
+.people img{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 3px;
+}
+.people p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.reservedialogadd{
+    border: 1px solid lightgrey;
+    background-color: #E6F4F3;
+    width: 450px; 
+    height: 490px; 
+    margin-top: 250px;
+    border-radius: 20px;
+}
+.reservedialogadd h2{
+    font-family: "FiraGo";
+    font-size: 23px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialogadd h4{
+    font-family: "FiraGo";
+    font-size: 17.5px;
+    color: #053354;
+    margin-top: 30px;
+}
+.reservedialogadd input{
+    width: 250px;
+    height: 33px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.reservedialogadd button{
+    margin-top: 60px;
+    width: 125px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "FiraGo";
+}

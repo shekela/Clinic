@@ -1,0 +1,120 @@
+h2{
+    width: 177px;
+    height: 31px;
+
+
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+
+    color: #18A4E1;
+
+    margin-left: 12.5%;
+    margin-top: 2.5%;
+}
+.main{
+    margin-top: 10px;
+}
+.top{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: space-between;
+    margin-left: 13.7%;
+}
+.top .box{
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    width: 65%;
+    justify-content: space-between;
+    margin-left: 13.7%;
+    margin-top: 30px;
+}
+.bottom .box{
+    display: block;
+    width: 300px;
+    height: 80px;
+}
+p{
+    font-family: 'FiraGO';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #053354;
+}
+.input{
+    width: 430px;
+    height: 40px;
+    border: 1px solid #ECF2F8;
+    border-radius: 50px;
+    margin-left: -5px;
+    font-size: 1em;
+}
+
+.emailinput{
+    display: flex;
+    align-items: center;
+    width: 430px;
+    height: 43px;
+    border-radius: 50px;
+    border: 1px solid #ECF2F8;
+    margin-left: -5px;
+}
+.emailinput input{
+    width: 380px;
+    height: 36px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    font-size: 1em;
+}
+.emailinput input::placeholder{
+    font-family: "FiraGo";
+    font-size: 1em;
+}
+.emailinput button{
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    background-color: white;
+    margin-right: 10px;
+}
+input{
+    outline: none;
+    margin-left: 20px;
+}
+.submit{
+    width: 180px;
+    height: 40px;
+    background: #053354;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-family: "FiraGo";
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 76%;
+    margin-top: 60px;
+    cursor: pointer;
+}
+pre{
+    color: red;
+    font-family: "FiraGo";
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+#contact{
+    display: block;
+    margin-top: 57px;
+}

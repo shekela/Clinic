@@ -25,9 +25,15 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "./node_modules/@fullcalendar/daygrid/index.global.min.js",
+              "./node_modules/@fullcalendar/timegrid/index.global.min.js",
+              "./node_modules/@fullcalendar/list/index.global.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e118e8ff-182e-42ce-b6c3-0523a8d4b6a2"
   }
 }

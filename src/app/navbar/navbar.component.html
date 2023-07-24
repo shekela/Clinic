@@ -1,0 +1,80 @@
+<div class="line"></div>
+<div class="top">
+     <img routerLink="/" src="assets/logo.png" class="img" />
+     <div class="services">
+          <h3 class="active">ექიმები</h3>
+          <h3>კლინიკები</h3>
+          <h3>ანოტაციები</h3>
+          <h3>აქციები</h3>
+          <h3>სერვისები</h3>
+          <h3>მედიკამენტები</h3>
+          <h3>კონტაქტი</h3>
+     </div>
+     <div class="reglog" *ngIf="!isLogged">
+          <div class="reglog2" style="margin-top: -10px;">
+               <button id="log" (click)="login.showModal()" (click)="showModal()">ავტორიზაცია</button>
+               <h2>/</h2>
+               <button routerLink="/Register">რეგისტრაცია</button>
+          </div>
+     </div>
+     <div class="reglog" *ngIf="isLogged" routerLink="./Myprofile">
+          <div class="reglog2">
+               <img [src]="data.photo" style="width: 35px;height: 35px;border-radius: 50%;margin-left: 15px;"/>
+               <p style="margin-left: 20px;" *ngIf="data.role != 'Admin'">{{data.firstname}} {{data.lastname}}</p>
+               <p style="margin-left: 20px;font-family: 'FiraGo';" *ngIf="data.role == 'Admin'">{{data.email}}</p>
+               <div (click)="activeLogout()"><i class="fa-solid fa-ellipsis-vertical" style="position: absolute;left: 85%; cursor: pointer;margin-top: -10px;"></i></div>
+          </div>
+          <div class="logout" *ngIf="active"><button (click)="logout()">Logout</button></div>
+     </div>
+     <div class="lang">
+          <h3>ENG</h3>
+     </div>
+</div>
+<div class="bottom">
+     <div class="Phone">
+          <img src="assets/Phone.png"/>
+          <p>032 2 100 100</p>
+     </div>
+     <div class="Location">
+          <img src="assets/Location.png"/>
+          <p>იაკობ ნიკოლაძე №10</p>
+     </div>
+     <input type="text" class="DoctorSearchByName" [(ngModel)]="searchWithName" placeholder="მოძებნე ექიმი სახელით"/>
+     <input type="text" class="DoctorSearchBySpec" [(ngModel)]="searchWithCategory" placeholder="მოძებნე სპეციალობით"/>
+     <button class="search" (click)="onSearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+</div>
+<dialog #login>
+      <div class="loginModal" *ngIf="loginModal" >
+          <form [formGroup]="loginForm" (ngSubmit)="CheckLogin(EmailC.value)" *ngIf="!SecurityOn">
+               <h2>ავტორიზაცია</h2>
+               <div class="modaldiv" style="margin-top: 0px;">
+                    <input placeholder="ელ. ფოსტა / ტელეფონის ნომერი" type="email" formControlName="Email" #EmailC required/>
+                    <input placeholder="პაროლი" type="password" formControlName="Password" required/>
+                    <p (click)="switchReset()">პაროლის აღდგენა</p>
+                    <button type="submit">შესვლა</button>
+               </div>
+          </form>
+      </div>
+      <div *ngIf="SecurityOn" class="resetpass">
+          <form [formGroup]="loginForm">
+               <input placeholder="კოდი" type="text" formControlName="OtpCode" required/>
+               <h5 style="margin-top: 0px;">შეიყვანეთ კოდი</h5>
+               <button (click)="Login()">submit</button>
+          </form>
+      </div>
+      <div class="resetpass" *ngIf="resetPass">
+          <form [formGroup]="resetPassword" (ngSubmit)="ResetPassword()">
+               <h2>პაროლის აღდგენა</h2>
+               <div class="modaldiv">
+                    <div class="emailinput">
+                         <input type="email" placeholder="ელ. ფოსტა" #Email required formControlName="EmailR" required=""/>
+                         <button  style="cursor: pointer;" type="button" (click)="SendReset(Email.value)"><i class="fa-solid fa-envelope-circle-check"></i></button>
+                     </div>
+                   <input placeholder="კოდი" type="text" formControlName="OtpR" required/>
+                   <input placeholder="ახალი პაროლი" type="password" formControlName="PasswordR" required/>
+                   <p (click)="switchLogin()">ავტორიზაცია</p>
+                   <button type="submit">აღდგენა</button>
+               </div>
+          </form>
+     </div>
+</dialog>
